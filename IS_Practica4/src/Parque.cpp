@@ -6,6 +6,7 @@
  */
 
 #include "Parque.h"
+#include "Date.h"
 
 Parque::Parque() {
 	// TODO Auto-generated constructor stub

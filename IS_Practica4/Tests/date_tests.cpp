@@ -1,3 +1,4 @@
+
 #include "../src/Date.h"
 #include "../cute/cute.h"
 #include "../cute/ide_listener.h"
@@ -38,7 +39,7 @@ void test_get_string_format(){
 	ASSERT(fecha2.get_date_string() == "12/12/12");
 }
 
-bool runAllTest(int argc, const char **argv){
+bool runAllTest_date(int argc, const char **argv){
 	cute::suite s {};
 	s.push_back(CUTE(test_Constructor));
 	s.push_back(CUTE(test_comparisons));
@@ -50,7 +51,8 @@ bool runAllTest(int argc, const char **argv){
 	bool success = runner(s, "AllTests");
 	return success;
 }
-
+/*
 int main(int argc, const char **argv){
-	return (runAllTest(argc, argv) ? 0 : 1);
+	return (runAllTest_date(argc, argv) ? 0 : 1);
 }
+*/

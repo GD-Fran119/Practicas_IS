@@ -5,15 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/Date.cpp \
-../src/Parque.cpp 
+../src/Parque.cpp \
+../src/Sendero.cpp 
 
 OBJS += \
 ./src/Date.o \
-./src/Parque.o 
+./src/Parque.o \
+./src/Sendero.o 
 
 CPP_DEPS += \
 ./src/Date.d \
-./src/Parque.d 
+./src/Parque.d \
+./src/Sendero.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
