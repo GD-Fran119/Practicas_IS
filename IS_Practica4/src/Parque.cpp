@@ -6,6 +6,8 @@
  */
 
 #include <iostream>
+#include <list>
+#include <iterator>
 #include "Parque.h"
 #include "Date.h"
 #include "Sendero.h"
@@ -38,7 +40,8 @@ void Parque::print_Info(){
 	std::cout << '\n';
 
 	std::cout << "Senderos: ";
-	for(auto aux : senderos) std::cout << aux.get_Nombre() + " ";
+	for(auto aux = senderos.begin(); aux != senderos.end(); aux++)
+		std::cout << aux -> get_Nombre() + ", ";
 	std::cout << '\n';
 
 }

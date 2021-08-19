@@ -28,8 +28,6 @@ private:
 	int length, state, dificulty, id;//id del sendero
 	std::string name, desc;
 	bool bike;
-	Sendero& operator=(const Sendero & send){return *this;};
-	Sendero(const Sendero &send){};
 
 public:
 	Sendero(int length, int state, int dif, std::string name,
@@ -45,6 +43,7 @@ public:
 	inline int const get_Longitud(){return length;};
 	void set_estado(int state);
 
+	bool operator==(Sendero aux){return (this -> id == aux.get_ID());};
 
 	virtual ~Sendero();
 };

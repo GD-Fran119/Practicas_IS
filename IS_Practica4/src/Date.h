@@ -15,8 +15,9 @@ private:
 	unsigned int day, month, year;
 public:
 	//Habria que cambiarla a private, esta en public para pruebas;
-	Date(unsigned int day = 1, unsigned int month = 1, unsigned int year = 0);
 	bool check_date(unsigned int day, unsigned int month, unsigned int year);
+
+	Date(unsigned int day = 1, unsigned int month = 1, unsigned int year = 0);
 
 	std::string const get_date_string(void);
 	inline unsigned int const get_day()const{return day;};

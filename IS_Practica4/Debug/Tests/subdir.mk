@@ -5,17 +5,14 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Tests/date_tests.cpp \
-../Tests/parque_tests.cpp \
 ../Tests/sendero_test.cpp 
 
 OBJS += \
 ./Tests/date_tests.o \
-./Tests/parque_tests.o \
 ./Tests/sendero_test.o 
 
 CPP_DEPS += \
 ./Tests/date_tests.d \
-./Tests/parque_tests.d \
 ./Tests/sendero_test.d 
 
 

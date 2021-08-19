@@ -24,7 +24,7 @@ public:
 	Parque(std::string lt, std::string lc, std::string prov, std::string nam,
 			int sur, Date dec, std::list<std::string> rec, std::list<Sendero> send);
 	void print_Info();
-	inline std::list<std::string> get_Senderos(){return senderos;};
+	inline std::list<Sendero> get_Senderos(){return senderos;};
 	void set_Info(std::string lt, std::string lc, std::string prov, std::string nam,
 			int sur, Date dec, std::list<std::string> rec, std::list<Sendero> send);
 	inline std::string get_Nombre(){return name;};
