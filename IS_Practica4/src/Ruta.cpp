@@ -26,11 +26,11 @@ bool Ruta::delete_Sendero(Sendero aux){
 
 	return ret;
 }
-bool Ruta::delete_Cliente(Visitante aux){
+bool Ruta::delete_Cliente(std::string DNI){
 	auto iterador = lista_visitantes.begin();
 	bool ret = false;
 	for(; iterador != lista_visitantes.end() and not ret; iterador++)
-		if(ret = (*iterador == aux))
+		if(ret = (*iterador == DNI))
 			lista_visitantes.erase(iterador);
 
 	return ret;

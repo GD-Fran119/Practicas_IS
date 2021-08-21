@@ -21,7 +21,7 @@ private:
 	std::list<Sendero> lista_senderos;
 	bool bici;
 	std::string monitor;
-	std::list<Visitante> lista_visitantes;
+	std::list<std::string> lista_visitantes;
 	unsigned int cantidad, max;
 public:
 	Ruta();
@@ -33,8 +33,8 @@ public:
 	inline void add_Sendero(Sendero aux){lista_senderos.push_back(aux);};
 	bool delete_Sendero(Sendero aux);
 
-	inline void add_Cliente(Visitante aux){lista_visitantes.push_back(aux);};
-	bool delete_Cliente(Visitante aux);
+	inline void add_Cliente(std::string DNI){lista_visitantes.push_back(DNI);};
+	bool delete_Cliente(std::string DNI);
 
 	virtual ~Ruta();
 };

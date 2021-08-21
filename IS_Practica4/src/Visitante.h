@@ -15,7 +15,7 @@
 
 class Visitante {
 private:
-	std::list<Ruta> list_rutas;
+	std::list<int> list_rutas;
 	std::string name, DNI, requirements;
 	unsigned int tel;
 	Date birthday;
@@ -26,11 +26,11 @@ public:
 	void setInfo(std::string nam, std::string DNI_, std::string req,
 			unsigned int tel_, Date birth);
 
-	inline std::list<Ruta> get_list()const{return list_rutas;};
+	inline std::list<int> get_list()const{return list_rutas;};
 
 	inline std::string get_DNI()const{return DNI;};
 
-	inline void anade_ruta(Ruta id){list_rutas.push_back(id);};
+	inline void anade_ruta(int id){list_rutas.push_back(id);};
 
 	bool operator==(Visitante aux){return (this->DNI == aux.get_DNI());};
 	virtual ~Visitante();
