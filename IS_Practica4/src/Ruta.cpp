@@ -11,9 +11,10 @@
 #include <iterator>
 
 int Ruta::ID = 0;
-
+//This constructor is private and non-used
 Ruta::Ruta() {
 	// TODO Auto-generated constructor stub
+	id = max = cantidad = bici = 0;
 
 }
 
