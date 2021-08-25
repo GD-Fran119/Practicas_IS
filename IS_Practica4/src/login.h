@@ -9,6 +9,7 @@
 #define SRC_LOGIN_H_
 #include <string>
 #include "Monitor.h"
+#include "Administrativo.h"
 #include "Date.h"
 
 bool check_credentials(std::string username, std::string password, bool monitor);
@@ -21,7 +22,7 @@ bool check_credentials(std::string username, std::string password, bool monitor)
 	Date is 1/1/0
 	Telephone is 0
 */
-Monitor get_access(std::string username);
+Monitor get_access_m(std::string username);
 Administrativo get_access_a(std::string username);
 
 

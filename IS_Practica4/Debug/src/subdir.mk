@@ -10,7 +10,8 @@ CPP_SRCS += \
 ../src/Parque.cpp \
 ../src/Ruta.cpp \
 ../src/Sendero.cpp \
-../src/Visitante.cpp 
+../src/Visitante.cpp \
+../src/login.cpp 
 
 OBJS += \
 ./src/Administrativo.o \
@@ -19,7 +20,8 @@ OBJS += \
 ./src/Parque.o \
 ./src/Ruta.o \
 ./src/Sendero.o \
-./src/Visitante.o 
+./src/Visitante.o \
+./src/login.o 
 
 CPP_DEPS += \
 ./src/Administrativo.d \
@@ -28,7 +30,8 @@ CPP_DEPS += \
 ./src/Parque.d \
 ./src/Ruta.d \
 ./src/Sendero.d \
-./src/Visitante.d 
+./src/Visitante.d \
+./src/login.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

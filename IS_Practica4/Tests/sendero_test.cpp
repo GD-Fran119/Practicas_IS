@@ -32,7 +32,8 @@ bool runAllTest_Sendero(int argc, const char **argv){
 	bool success = runner(s, "AllTests");
 	return success;
 }
-
+/*
 int main(int argc, const char **argv){
 	return (runAllTest_Sendero(argc, argv) ? 0 : 1);
 }
+*/
