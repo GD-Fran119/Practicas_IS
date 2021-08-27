@@ -15,6 +15,7 @@
 #include "../cute/xml_listener.h"
 #include "../cute/cute_runner.h"
 #include <string>
+#include "tests.h"
 
 void test_check_credentials(){
 	ASSERT(check_credentials("monitor", "pass", 1));
@@ -37,20 +38,4 @@ void test_get_access(){
 
 	aux2 = get_access_a("administrativo");
 	ASSERT(aux2.getDNI() == "");
-}
-
-bool runAllTest_login(int argc, const char **argv){
-	cute::suite s {};
-	s.push_back(CUTE(test_check_credentials));
-	s.push_back(CUTE(test_get_access));
-
-	cute::xml_file_opener xmlfile(argc, argv);
-	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
-	auto runner = cute::makeRunner(lis, argc, argv);
-	bool success = runner(s, "AllTests");
-	return success;
-}
-
-int main(int argc, const char **argv){
-	return (runAllTest_login(argc, argv) ? 0 : 1);
 }

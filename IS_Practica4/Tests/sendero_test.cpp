@@ -6,6 +6,7 @@
 #include "../cute/cute_runner.h"
 #include <string>
 #include <iostream>
+#include "tests.h"
 
 void test_id(){
 
@@ -21,19 +22,3 @@ void test_id(){
 	ASSERT(send5.get_ID() != send4.get_ID());
 	ASSERT(send5.get_ID() == 5);
 }
-
-bool runAllTest_Sendero(int argc, const char **argv){
-	cute::suite s {};
-	s.push_back(CUTE(test_id));
-
-	cute::xml_file_opener xmlfile(argc, argv);
-	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
-	auto runner = cute::makeRunner(lis, argc, argv);
-	bool success = runner(s, "AllTests");
-	return success;
-}
-/*
-int main(int argc, const char **argv){
-	return (runAllTest_Sendero(argc, argv) ? 0 : 1);
-}
-*/

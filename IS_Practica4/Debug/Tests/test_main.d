@@ -1,6 +1,9 @@
-Tests/date_tests.o: ../Tests/date_tests.cpp ../Tests/../src/Date.h \
- ../Tests/../cute/cute.h ../Tests/../cute/cute_base.h \
- ../Tests/../cute/cute_to_string.h ../Tests/../cute/cute_demangle.h \
+Tests/test_main.o: ../Tests/test_main.cpp ../Tests/../src/Date.h \
+ ../Tests/../src/login.h ../Tests/../src/Monitor.h ../Tests/../src/Date.h \
+ ../Tests/../src/Administrativo.h ../Tests/../src/Monitor.h \
+ ../Tests/../src/Administrativo.h ../Tests/../cute/cute.h \
+ ../Tests/../cute/cute_base.h ../Tests/../cute/cute_to_string.h \
+ ../Tests/../cute/cute_demangle.h \
  ../Tests/../cute/cute_determine_version.h \
  ../Tests/../cute/cute_integer_sequence.h ../Tests/../cute/cute_equals.h \
  ../Tests/../cute/cute_diff_values.h \
@@ -17,6 +20,18 @@ Tests/date_tests.o: ../Tests/date_tests.cpp ../Tests/../src/Date.h \
  ../Tests/../cute/cute_runner.h ../Tests/tests.h
 
 ../Tests/../src/Date.h:
+
+../Tests/../src/login.h:
+
+../Tests/../src/Monitor.h:
+
+../Tests/../src/Date.h:
+
+../Tests/../src/Administrativo.h:
+
+../Tests/../src/Monitor.h:
+
+../Tests/../src/Administrativo.h:
 
 ../Tests/../cute/cute.h:
 

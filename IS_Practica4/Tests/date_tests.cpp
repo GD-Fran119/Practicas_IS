@@ -4,6 +4,7 @@
 #include "../cute/ide_listener.h"
 #include "../cute/xml_listener.h"
 #include "../cute/cute_runner.h"
+#include "tests.h"
 
 void test_Constructor(){
 
@@ -38,21 +39,3 @@ void test_get_string_format(){
 	ASSERT(fecha1.get_date_string() == "01/01/1");
 	ASSERT(fecha2.get_date_string() == "12/12/12");
 }
-
-bool runAllTest_date(int argc, const char **argv){
-	cute::suite s {};
-	s.push_back(CUTE(test_Constructor));
-	s.push_back(CUTE(test_comparisons));
-	s.push_back(CUTE(test_get_string_format));
-
-	cute::xml_file_opener xmlfile(argc, argv);
-	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
-	auto runner = cute::makeRunner(lis, argc, argv);
-	bool success = runner(s, "AllTests");
-	return success;
-}
-/*
-int main(int argc, const char **argv){
-	return (runAllTest_date(argc, argv) ? 0 : 1);
-}
-*/

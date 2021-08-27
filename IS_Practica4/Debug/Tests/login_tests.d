@@ -17,7 +17,7 @@ Tests/login_tests.o: ../Tests/login_tests.cpp ../Tests/../src/Date.h \
  ../Tests/../cute/cute_testmember.h ../Tests/../cute/cute_version.h \
  ../Tests/../cute/ide_listener.h ../Tests/../cute/cute_listener.h \
  ../Tests/../cute/xml_listener.h ../Tests/../cute/cute_xml_file.h \
- ../Tests/../cute/cute_runner.h
+ ../Tests/../cute/cute_runner.h ../Tests/tests.h
 
 ../Tests/../src/Date.h:
 
@@ -86,3 +86,5 @@ Tests/login_tests.o: ../Tests/login_tests.cpp ../Tests/../src/Date.h \
 ../Tests/../cute/cute_xml_file.h:
 
 ../Tests/../cute/cute_runner.h:
+
+../Tests/tests.h:

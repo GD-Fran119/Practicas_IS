@@ -6,17 +6,20 @@
 CPP_SRCS += \
 ../Tests/date_tests.cpp \
 ../Tests/login_tests.cpp \
-../Tests/sendero_test.cpp 
+../Tests/sendero_test.cpp \
+../Tests/test_main.cpp 
 
 OBJS += \
 ./Tests/date_tests.o \
 ./Tests/login_tests.o \
-./Tests/sendero_test.o 
+./Tests/sendero_test.o \
+./Tests/test_main.o 
 
 CPP_DEPS += \
 ./Tests/date_tests.d \
 ./Tests/login_tests.d \
-./Tests/sendero_test.d 
+./Tests/sendero_test.d \
+./Tests/test_main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

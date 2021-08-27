@@ -14,7 +14,7 @@ Tests/sendero_test.o: ../Tests/sendero_test.cpp ../Tests/../src/Sendero.h \
  ../Tests/../cute/cute_testmember.h ../Tests/../cute/cute_version.h \
  ../Tests/../cute/ide_listener.h ../Tests/../cute/cute_listener.h \
  ../Tests/../cute/xml_listener.h ../Tests/../cute/cute_xml_file.h \
- ../Tests/../cute/cute_runner.h
+ ../Tests/../cute/cute_runner.h ../Tests/tests.h
 
 ../Tests/../src/Sendero.h:
 
@@ -71,3 +71,5 @@ Tests/sendero_test.o: ../Tests/sendero_test.cpp ../Tests/../src/Sendero.h \
 ../Tests/../cute/cute_xml_file.h:
 
 ../Tests/../cute/cute_runner.h:
+
+../Tests/tests.h:
