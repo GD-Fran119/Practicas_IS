@@ -11,7 +11,9 @@ CPP_SRCS += \
 ../src/Ruta.cpp \
 ../src/Sendero.cpp \
 ../src/Visitante.cpp \
-../src/login.cpp 
+../src/funciones.cpp \
+../src/login.cpp \
+../src/main.cpp 
 
 OBJS += \
 ./src/Administrativo.o \
@@ -21,7 +23,9 @@ OBJS += \
 ./src/Ruta.o \
 ./src/Sendero.o \
 ./src/Visitante.o \
-./src/login.o 
+./src/funciones.o \
+./src/login.o \
+./src/main.o 
 
 CPP_DEPS += \
 ./src/Administrativo.d \
@@ -31,7 +35,9 @@ CPP_DEPS += \
 ./src/Ruta.d \
 ./src/Sendero.d \
 ./src/Visitante.d \
-./src/login.d 
+./src/funciones.d \
+./src/login.d \
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -12,12 +12,11 @@
 
 class Sendero {
 private:
-	static unsigned int ID;//Genera el id para el siguiente sendero
 	/*
 	state:
 		1 - Abierto
 		2 - Cerrado por mantenimiento
-		3 - No disponible(el sendero, no la opcion)
+		3 - El sendero no esta disponible
 
 	///////////////////////////
 	dificulty:
@@ -25,25 +24,44 @@ private:
 		2 - Average
 		3 - Hard
 	*/
-	int length, state, dificulty, id;//id del sendero
-	std::string name, desc;
+	int length, state, dificulty;
+	std::string name, desc; //El identificador del sendero es el nombre
 	bool bike;
 
 public:
 	Sendero(int length, int state, int dif, std::string name,
 			std::string desc, bool bike);
+
 	inline std::string const get_Nombre(){return name;};
 	inline std::string const get_Desc(){return desc;};
 	inline bool const get_Bici(){return bike;};
+
 	void set_Info(int lenght, int state, int dif, std::string name,
 			std::string desc, bool bike);
-	inline int const get_ID(){return id;};
-	inline int const get_estado(){return state;};
-	inline int const get_Dificultad(){return dificulty;};
+
+	inline std::string const get_estado(){
+		switch (state){
+		case 1: {return std::string("abierto");}break;
+		case 2: {return std::string("cerrado por mantenimiento");}break;
+		case 3: {return std::string("no disponible");}break;
+		default: return "";
+		}
+	};
+
+	inline std::string const get_Dificultad(){
+		switch (dificulty){
+				case 1: {return std::string("facil");}break;
+				case 2: {return std::string("medio");}break;
+				case 3: {return std::string("dificil");}break;
+				default: return "";
+				}
+	};
+
 	inline int const get_Longitud(){return length;};
+
 	void set_estado(int state);
 
-	bool operator==(Sendero aux){return (this -> id == aux.get_ID());};
+	bool operator==(Sendero aux){return (this -> name == aux.get_Nombre());};
 
 	virtual ~Sendero();
 };

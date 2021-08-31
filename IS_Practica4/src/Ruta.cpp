@@ -9,16 +9,28 @@
 #include <list>
 #include <string>
 #include <iterator>
+#include <cstdlib>
 
-int Ruta::ID = 0;
+
 //This constructor is private and non-used
-Ruta::Ruta() {
+Ruta::Ruta(Date a, bool b, std::string mon, unsigned int m, std::string ID):fecha(a), bici(b), monitor(mon), max(m){
 	// TODO Auto-generated constructor stub
-	id = max = cantidad = bici = 0;
+	if(ID == "")
+		id = generate_ID();
+	else id = ID;
+
 
 }
 
-bool Ruta::delete_Sendero(Sendero aux){
+std::string Ruta::generate_ID(){
+	std::string aux("qwertyuiopasdfghjklzxcvbnm1234567890"), ret("");
+	for(int i = 0; i < 10; ++i)
+		ret += aux[rand() % aux.size()];
+
+	return ret;
+}
+
+bool Ruta::delete_Sendero(std::string aux){
 	auto iterador = lista_senderos.begin();
 	bool ret = false;
 	for(; iterador != lista_senderos.end() and not ret; iterador++)

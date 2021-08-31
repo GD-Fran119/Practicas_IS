@@ -10,7 +10,6 @@
 
 void test_check_credentials();
 void test_get_access();
-void test_id();
 void test_Constructor();
 void test_comparisons();
 void test_get_string_format();

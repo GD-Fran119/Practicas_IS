@@ -25,8 +25,6 @@ bool runAllTest_login(int argc, const char **argv){
 	s.push_back(CUTE(test_comparisons));
 	s.push_back(CUTE(test_get_string_format));
 
-	s.push_back(CUTE(test_id));
-
 	s.push_back(CUTE(test_check_credentials));
 	s.push_back(CUTE(test_get_access));
 
@@ -36,8 +34,9 @@ bool runAllTest_login(int argc, const char **argv){
 	bool success = runner(s, "AllTests");
 	return success;
 }
-
+/*
 int main(int argc, const char **argv){
 	return (runAllTest_login(argc, argv) ? 0 : 1);
 }
 
+*/

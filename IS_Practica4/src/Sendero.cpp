@@ -7,7 +7,6 @@
 
 #include "Sendero.h"
 
-unsigned int Sendero::ID = 0;
 
 Sendero::Sendero(int length, int state, int dif, std::string name, std::string desc,
 		bool bike):length(length), name(name), desc(desc), bike(bike){
@@ -18,7 +17,6 @@ Sendero::Sendero(int length, int state, int dif, std::string name, std::string d
 	if(dif < 4 and dif > 0) dificulty = dif;
 	else dificulty = 1;
 
-	id = ++ID;
 
 }
 
