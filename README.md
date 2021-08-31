@@ -7,4 +7,6 @@ fichero "senderos.txt". Esto se usó para probar el funcionamiento del programa.
 
 Con respecto a los logins, hay una cuenta (de prueba) ya creada para un monitor con la que se evaluó el comportamiento del programa.
 
+Para los test, descomentar el archivo Tests/test.main.cpp y comentar la funcion main() de src/main.cpp.
+
 Nota: Ejecutar el programa desde el mismo eclipse.
